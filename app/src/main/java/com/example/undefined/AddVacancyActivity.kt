@@ -28,7 +28,9 @@ class AddVacancyActivity : AppCompatActivity() {
             val key = db.push().key
             val currentVacancy = Vacancy(key, title, description, imageUrl)
 
-            db.child(key.toString()).setValue(currentVacancy)
+            db.child(key.toString()).setValue(currentVacancy).addOnSuccessListener {
+                finish()
+            }
 
         }
     }

@@ -20,7 +20,6 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
     private val binding get() = _binding!!
 
     private val auth = FirebaseAuth.getInstance()
-    private val db = FirebaseDatabase.getInstance().getReference("vacancies")
 
     override fun onCreateView(
         inflater: LayoutInflater,
